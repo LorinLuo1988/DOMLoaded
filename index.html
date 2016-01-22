@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<h4 id="loaded"></h4>
+</head>
+<body>
+<script src="domLoaded.js"></script>
+<script>
+	function loaded1 (a) {
+		document.getElementById("loaded").innerHTML = a;
+	}
+	function loaded2 (b) {
+		alert(b);
+	}
+	DOMContentLoaded.callback({});
+	DOMContentLoaded.callback(loaded1, "DOM Loaded");
+	DOMContentLoaded.callback(loaded2, "DOM Loaded");
+</script>
+</body>
+</html>
